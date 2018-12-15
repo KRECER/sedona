@@ -17,7 +17,8 @@ const gulp 				    =	require('gulp'),
 			postHTML        = require('gulp-posthtml'),
 			include         = require('posthtml-include'),
 			cheerio         = require('gulp-cheerio'),
-			svgstore        = require('gulp-svgstore');
+			svgstore        = require('gulp-svgstore'),
+			githubPages     = require('gulp-gh-pages');
 
 
 gulp.task('server', function() {
@@ -40,6 +41,11 @@ gulp.task('html', () => {
 		.pipe( postHTML([include()]) )
 		.pipe( gulp.dest('build') )
 		.pipe( browserSync.stream() );
+});
+
+gulp.task('deploy', () => {
+	return gulp.src('build/**/*')
+		.pipe( githubPages() )
 });
 
 gulp.task('script', () => {
