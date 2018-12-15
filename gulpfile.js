@@ -95,7 +95,7 @@ gulp.task('images', () => {
 });
 
 gulp.task('copy', () => {
-	return gulp.src(['source/fonts/**/*.{woff,woff2}', 'source/js/**'], {base: 'source'})
+	return gulp.src(['source/fonts/**/*.{woff,woff2}'], {base: 'source'})
 		.pipe( gulp.dest('build') )
 });
 
