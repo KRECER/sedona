@@ -1,0 +1,51 @@
+.page-header__intro {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: -1;
+
+	min-height: 389px;
+
+	background-image: url("../img/page-header/bg-mobile.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+
+		width: 100%;
+		height: 27px;
+
+		background-image: url("../img/page-header/triangle.svg");
+		background-repeat: no-repeat;
+		background-size: 200% 27px;
+		background-position: 50%;
+	}
+}
+
+@media #{$tablet-width} {
+	.page-header__intro {
+		min-height: 518px;
+
+		&::after {
+			height: 60px;
+			background-size: 155% 60px;
+		}
+	}
+
+	.page-header__intro img {
+		width: 460px;
+		height: 350px;
+	}
+}
+
+@media #{$desktop-width} {
+	.page-header__intro {
+		&::after {
+			background-size: 100% 60px;
+		}
+	}
+}
