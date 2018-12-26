@@ -24,18 +24,18 @@
 @media #{$only-mobile-width} {
 	.main-nav__toggle {
 		position: absolute;
-		top: 17px;
+		top: 14px;
 		right: 20px;
 		z-index: 1;
 	
-		width: 23px;
-		height: 22px;
+		width: 30px;
+		height: 30px;
 	
 		cursor: pointer;
 		background-color: transparent;
 		border: none;
 	
-		background-size: 23px 22px;
+		background-size: 30px 30px;
 	}
 	
 	.main-nav--opened .main-nav__toggle {
