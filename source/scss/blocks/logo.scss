@@ -1,0 +1,47 @@
+.logo {
+	
+}
+
+.logo a {
+	position: relative;
+
+	height: 57px;
+
+	background-color: #ffffff;
+}
+
+.logo img {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 102px;
+	height: 83px;
+}
+
+@media #{$tablet-width} {
+	.logo {
+		order: 3;
+	}
+
+	li.logo a {
+		padding-top: 0;
+		padding-bottom: 0;
+
+		background-color: transparent;
+	}
+
+	.logo img {
+		position: static;
+
+		transform: translateX(0);
+	}
+}
+
+@media #{$desktop-width} {
+	.logo img {
+		width: 188px;
+		height: 96px;
+	}
+}
